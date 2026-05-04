@@ -49,6 +49,20 @@ export const Route = createRootRoute({
         href: "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Cairo:wght@400;600;700&family=Amiri:wght@400;700&display=swap",
       },
     ],
+    scripts: [
+      {
+        src: "https://www.googletagmanager.com/gtag/js?id=G-DXM6DVD0EY",
+        async: true,
+      },
+      {
+        children: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-DXM6DVD0EY');
+        `,
+      },
+    ],
   }),
   shellComponent: RootShell,
   component: RootComponent,
